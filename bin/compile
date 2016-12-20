@@ -20,6 +20,8 @@ curl --retry 3 --silent --location $JVM_COMMON_BUILDPACK | tar xzm -C /tmp/jvm-c
 . /tmp/jvm-common/bin/util
 . /tmp/jvm-common/bin/java
 . /tmp/jvm-common/opt/jdbc.sh
+#rishi - modify jdk URL to download it from rishi2
+JDK_URL_1_8="http://9.26.155.191/s390x/buildpacks/openjdk-1.8.0.tar.gz"
 install_java_with_overlay ${BUILD_DIR}
 
 #create the cache dir if it doesn't exist
